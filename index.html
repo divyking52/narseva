@@ -225,14 +225,13 @@ ul{list-style:none}
 .reveal-d3{transition-delay:.3s}
 
 /* ========== PURPOSE — bg strip + curved text ========== */
-.purpose{padding-bottom:0;overflow:visible}
+.purpose{padding-bottom:0;overflow:hidden}
 .purpose .section-head{margin-bottom:32px}
 .purpose-stage{
   position:relative;
   margin-top:24px;
-  padding:72px 0 72px;
-  overflow-x:hidden;
-  overflow-y:visible;
+  padding:72px 0 100px;
+  overflow:hidden;
 }
 .purpose-bg{
   position:absolute;inset:0;
@@ -251,14 +250,13 @@ ul{list-style:none}
 .purpose-curve{
   position:absolute;
   left:50%;
-  bottom:0;
+  bottom:24px;
   top:auto;
-  transform:translate(-50%,28%) rotate(-10deg);
+  transform:translateX(-50%) rotate(-10deg);
   width:min(1661px,155vw);
   height:auto;
   z-index:1;
   pointer-events:none;
-  overflow:visible;
 }
 .purpose-curve svg{
   display:block;width:100%;height:auto;
@@ -275,7 +273,6 @@ ul{list-style:none}
   position:relative;z-index:2;
   width:min(960px,86vw);
   margin-inline:auto;
-  padding-bottom:28px;
 }
 
 .stand-for{
@@ -765,10 +762,10 @@ ul{list-style:none}
 /* ========== RESPONSIVE ========== */
 @media (max-width:960px){
   .stand-for{grid-template-columns:1fr}
-  .purpose-stage{padding:56px 0 72px}
-  .purpose-stage-content{width:min(920px,90vw);padding-bottom:40px}
+  .purpose-stage{padding:56px 0 88px}
+  .purpose-stage-content{width:min(920px,90vw)}
   .purpose-curve{
-    bottom:2%;
+    bottom:16px;
     width:min(1661px,170vw);
   }
   .purpose-curve text{font-size:22px}
@@ -793,10 +790,9 @@ ul{list-style:none}
   .hero-title{font-size:2.1rem}
   .footer-bottom{flex-direction:column;text-align:center}
   .impact-depth-wrap{height:calc(100vh * 5.5)}
-  .purpose-stage{padding:36px 0 56px}
-  .purpose-stage-content{padding-bottom:32px}
+  .purpose-stage{padding:36px 0 72px}
   .purpose-curve{
-    bottom:0;
+    bottom:12px;
     width:min(1661px,200vw);
   }
   .purpose-curve text{font-size:20px}
